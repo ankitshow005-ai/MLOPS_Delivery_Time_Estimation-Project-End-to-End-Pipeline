@@ -1,0 +1,12 @@
+{
+    "baseline_mae": 488.64,
+    "model_mae": 84.41,
+    "rmse": 106.67,
+    "r2_score": 0.9515,
+    "improvement_pct": 82.73,
+    "sla_metrics": {
+        "sla_\u00b130_min": 22.71,
+        "sla_\u00b160_min": 43.3,
+        "sla_\u00b1120_min": 74.64
+    }
+}

@@ -1,0 +1,61 @@
+# =========================
+# RAW DATA SCHEMA (INPUT)
+# =========================
+
+raw_columns:
+  - delivery_id
+  - delivery_partner
+  - package_type
+  - vehicle_type
+  - delivery_mode
+  - region
+  - weather_condition
+  - distance_km
+  - package_weight_kg
+  - delivery_time_hours
+  - expected_time_hours
+  - delivery_rating
+  - delivery_cost
+  - delivery_status
+  - delayed
+
+# -------------------------
+# Columns to drop later
+# -------------------------
+drop_columns:
+  - _id
+  - delivery_id
+  - delivery_rating
+  - delivery_cost
+  - delivery_status
+  - delayed
+
+# -------------------------
+# Columns used to CREATE target
+# -------------------------
+derived_source_columns:
+  - delivery_time_hours
+  - expected_time_hours
+
+# -------------------------
+# Target column
+# -------------------------
+target_column: eta_error_minutes
+
+# -------------------------
+# Numerical INPUT features
+# -------------------------
+numerical_columns:
+  - distance_km
+  - package_weight_kg
+
+# -------------------------
+# Categorical INPUT features
+# -------------------------
+categorical_columns:
+  - delivery_partner
+  - package_type
+  - vehicle_type
+  - delivery_mode
+  - region
+  - weather_condition

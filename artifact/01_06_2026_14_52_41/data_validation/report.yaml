@@ -1,0 +1,6 @@
+{
+    "validation_status": false,
+    "errors": [
+        "Missing columns: ['eta_error_minutes']"
+    ]
+}

@@ -54,7 +54,7 @@ class ModelEvaluation:
 
     def initiate_model_evaluation(self) -> ModelEvaluationArtifact:
         try:
-            logging.info("Starting Model Evaluation (RAW data → model)")
+            logging.info("Starting Model Evaluation (RAW data -> model)")
 
             # --------------------------------------------------
             # 1. Load RAW data

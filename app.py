@@ -58,12 +58,14 @@ class ETAForm:
 # =====================================================
 # ROUTES
 # =====================================================
+
 @app.get("/")
 async def index(request: Request):
     return templates.TemplateResponse(
         "eta.html",
         {"request": request, "context": "Enter delivery details"}
     )
+
 
 @app.get("/train")
 async def train():
@@ -73,6 +75,13 @@ async def train():
         return Response("Training completed successfully")
     except Exception as e:
         return Response(f"Training failed: {e}")
+
+
+# Health check endpoint (used by Docker)
+@app.get("/health")
+async def health():
+    return {"status": "running"}
+
 
 @app.post("/")
 async def predict(request: Request):

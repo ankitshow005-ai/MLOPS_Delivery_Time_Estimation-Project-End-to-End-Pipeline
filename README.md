@@ -422,6 +422,7 @@ Possible improvements include:
 * Experiment tracking (MLflow)
 * Feature store integration
 * Drift detection and monitoring
+* Feeding more varied data
 * Using advanced models like XGBoost or Random Forest
 
 ---

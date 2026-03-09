@@ -15,7 +15,6 @@ mypy-boto3-s3
 botocore
 fastapi
 python-multipart
-uvicorn
+uvicorn[standard]
 jinja2
-imblearn
--e .
+imbalanced-learn

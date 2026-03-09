@@ -96,11 +96,16 @@ async def predict(request: Request):
 
         prediction = float(predictor.predict(input_df)[0])
 
+        if prediction < 0:
+            message = f"Delivery expected {abs(prediction):.2f} minutes EARLY"
+        else:
+            message = f"Delivery expected {prediction:.2f} minutes LATE"
+
         return templates.TemplateResponse(
             "eta.html",
             {
                 "request": request,
-                "context": f"Estimated ETA Error: {round(prediction, 2)} minutes"
+                "context": message
             }
         )
 
